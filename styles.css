@@ -1,0 +1,1078 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2a2a2a 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000 !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.7) 50%, rgba(42, 42, 42, 0.6) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.love-text {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hero-availability {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.hero-watch {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin: 30px auto 0 auto;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.play-button i {
+    color: #000000;
+    font-size: 24px;
+    margin-left: 3px;
+}
+
+/* Bio Section */
+.bio {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+}
+
+.bio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.bio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(86, 168, 252, 0.2);
+}
+
+.bio-content {
+    padding-left: 20px;
+}
+
+.bio-title {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* Discography Section */
+.discografia {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #1e293b;
+    position: relative;
+}
+
+.discografia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.section-title {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #000000, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+}
+
+.featured-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.album-cover {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(86, 168, 252, 0.1);
+}
+
+.album-cover img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.album-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+.album-overlay h3 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.album-overlay h4 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.album-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+
+.album-title-info {
+    flex: 1;
+}
+
+.album-title-info h3 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0 0 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.album-title-info h3:hover {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    animation: scrollAlbumTitle 4s linear infinite;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scrollAlbumTitle {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(0);
+    }
+    85% {
+        transform: translateX(calc(-100% + 300px));
+    }
+    100% {
+        transform: translateX(calc(-100% + 300px));
+    }
+}
+
+.album-title-info p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 500;
+}
+
+.play-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+}
+
+.play-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.tracklist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease;
+}
+
+.track:hover {
+    background-color: rgba(86, 168, 252, 0.05);
+    border-radius: 8px;
+    padding: 15px 10px;
+}
+
+.track-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.track-name:hover {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    animation: scrollTrackText 2.5s linear infinite;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3px 8px;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scrollTrackText {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateX(calc(-100% + 150px));
+    }
+    100% {
+        transform: translateX(calc(-100% + 150px));
+    }
+}
+
+.track-duration {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.streaming-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.streaming-icons i {
+    color: #64748b;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.streaming-icons i:hover {
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.album-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: visible;
+    min-height: 350px;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.album-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.album-year {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.album-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.4;
+}
+
+.album-title:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.album-play {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.album-play:hover {
+    transform: translateX(-50%) scale(1.1);
+    background: rgba(0, 0, 0, 1);
+    border-color: rgba(0, 0, 0, 1);
+}
+
+.album-play i {
+    font-size: 12px;
+    margin-left: 1px;
+}
+
+/* Videos Section */
+.videos {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 60px 0;
+    position: relative;
+}
+
+.videos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.videos-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.videos-header h2 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.channel-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.channel-button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-decoration: none;
+}
+
+.videos-social {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.videos-social .social-link {
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.videos-social .social-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.video-player {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(19, 67, 130, 0.9), rgba(13, 47, 90, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.fallback-content {
+    text-align: center;
+    color: #fff;
+}
+
+.fallback-content h3 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.fallback-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.youtube-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.youtube-link:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.youtube-link i {
+    font-size: 1.3rem;
+}
+
+
+/* Tour Section */
+.tour {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2a2a2a 100%);
+    position: relative;
+}
+
+.tour::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.tour-title {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+}
+
+.tour-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.tour-date {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tour-date:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tour-location h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tour-location p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tour-date-info {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tickets-button {
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-self: end;
+}
+
+.tickets-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #cccccc, #999999);
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2a2a2a 100%);
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.newsletter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-text h2 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+}
+
+.email-input {
+    padding: 15px 0;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    font-size: 1.1rem;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+    border-bottom-color: #fff;
+}
+
+.email-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.subscribe-button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .logo-image {
+        max-width: 250px;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .bio-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .featured-album {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .track {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .album-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .videos-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .videos-social {
+        margin-left: 0;
+    }
+    
+    .tour-date {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .tickets-button {
+        justify-self: center;
+    }
+    
+    .newsletter {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 2rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        max-width: 200px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .bio-title {
+        font-size: 2rem;
+    }
+    
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+}
