@@ -981,6 +981,27 @@ body {
 }
 
 /* Responsive Design */
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2.2rem;
+    }
+    
+    .album-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -1242,7 +1263,12 @@ body {
     }
 }
 
+/* Large mobile devices (iPhone 14 Pro Max, Galaxy S23 Ultra) */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
     .logo-image {
         max-width: 200px;
     }
@@ -1261,5 +1287,344 @@ body {
     
     .album-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .video-container {
+        height: 250px;
+    }
+}
+
+/* Medium mobile devices (iPhone 14, Galaxy S23) */
+@media (max-width: 430px) {
+    .container {
+        padding: 0 18px;
+    }
+    
+    .logo-image {
+        max-width: 170px;
+    }
+    
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero-availability {
+        font-size: 0.95rem;
+    }
+    
+    .hero-watch {
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.9rem;
+    }
+    
+    .bio-title {
+        font-size: 1.9rem;
+    }
+    
+    .bio-text {
+        font-size: 0.95rem;
+    }
+    
+    .video-container {
+        height: 220px;
+    }
+    
+    .album-card {
+        padding: 12px;
+    }
+    
+    .album-title {
+        font-size: 1.1rem;
+    }
+    
+    .track-name {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile devices (iPhone SE, older Android) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo-image {
+        max-width: 160px;
+    }
+    
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-availability {
+        font-size: 0.9rem;
+    }
+    
+    .hero-watch {
+        font-size: 0.8rem;
+    }
+    
+    .play-button {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .bio-title {
+        font-size: 1.7rem;
+    }
+    
+    .bio-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .video-container {
+        height: 200px;
+    }
+    
+    .album-card {
+        padding: 10px;
+    }
+    
+    .album-title {
+        font-size: 1rem;
+    }
+    
+    .track-name {
+        font-size: 0.8rem;
+    }
+    
+    .tour-date {
+        padding: 12px;
+    }
+    
+    .tour-location h3 {
+        font-size: 0.95rem;
+    }
+    
+    .tour-location p {
+        font-size: 0.75rem;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 1.7rem;
+    }
+    
+    .newsletter-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (iPhone 5/SE, very small Android) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .logo-image {
+        max-width: 140px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-availability {
+        font-size: 0.85rem;
+    }
+    
+    .hero-watch {
+        font-size: 0.75rem;
+    }
+    
+    .play-button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .bio-title {
+        font-size: 1.5rem;
+    }
+    
+    .bio-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .video-container {
+        height: 180px;
+    }
+    
+    .album-card {
+        padding: 8px;
+    }
+    
+    .album-title {
+        font-size: 0.95rem;
+    }
+    
+    .track-name {
+        font-size: 0.75rem;
+    }
+    
+    .tour-date {
+        padding: 10px;
+    }
+    
+    .tour-location h3 {
+        font-size: 0.9rem;
+    }
+    
+    .tour-location p {
+        font-size: 0.7rem;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .newsletter-text p {
+        font-size: 0.85rem;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Touch-friendly improvements for all mobile devices */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+    
+    .social-link {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .play-button,
+    .tickets-button,
+    .newsletter-form button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .album-play {
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Improve text selection */
+    .bio-text,
+    .newsletter-text p {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+    
+    /* Smooth scrolling for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Improve focus states for accessibility */
+    .nav-link:focus,
+    .social-link:focus,
+    .play-button:focus,
+    .tickets-button:focus {
+        outline: 2px solid #56A8FC;
+        outline-offset: 2px;
+    }
+    
+    /* Better button hover states for touch devices */
+    .play-button:active,
+    .tickets-button:active,
+    .album-play:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .logo-image {
+        max-width: 150px;
+    }
+    
+    .video-container {
+        height: 300px;
+    }
+    
+    .bio-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .featured-album {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-image,
+    .bio-image,
+    .album-cover img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 }
